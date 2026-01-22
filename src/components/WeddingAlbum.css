@@ -1,0 +1,21 @@
+.wedding-album {
+  padding: 20px;
+  text-align: center;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.album-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.album-item img:hover {
+  transform: scale(1.05);
+}

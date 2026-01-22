@@ -1,0 +1,22 @@
+.love-story-container {
+  background-color: #fff0f6;
+  padding: 60px 20px;
+  text-align: center;
+  margin: 20px 0px;
+  border-radius: 10px;
+}
+
+.love-story-title {
+  font-family: 'Playwrite DK Loopet', cursive;
+  font-size: 36px;
+  color: #c9184a;
+  margin-bottom: 20px;
+}
+
+.love-story-text {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #444;
+}

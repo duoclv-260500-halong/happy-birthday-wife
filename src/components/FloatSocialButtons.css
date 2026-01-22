@@ -1,0 +1,46 @@
+.float-social-buttons {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.float-btn {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.float-btn:hover {
+  transform: scale(1.1);
+  background-color: #e0f0ff;
+}
+
+
+/* Riêng từng nền có thể custom sau nếu thích */
+.float-btn.facebook {
+  color: #1877f2;
+}
+
+.float-btn.messenger {
+  color: #0084ff;
+}
+
+.float-btn.zalo {
+  color: #008fe5;
+}
+
+.float-btn svg {
+  width: 32px;
+  height: 32px;
+}

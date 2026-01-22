@@ -1,0 +1,27 @@
+.heart-container {
+  position: fixed;
+  bottom: 0;  /* Đặt trái tim bắt đầu từ dưới màn hình */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.heart {
+  position: absolute;
+  font-size: 30px;
+  opacity: 1;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    bottom: -40px;  /* Bắt đầu từ dưới màn hình */
+    opacity: 1;
+  }
+  100% {
+    bottom: 100vh;  /* Di chuyển lên trên */
+    opacity: 0;
+  }
+}

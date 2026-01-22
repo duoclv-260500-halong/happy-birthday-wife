@@ -1,0 +1,21 @@
+.banner-slide {
+  width: 90%;
+  max-width: 90%;
+  overflow: hidden;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  outline: none;
+}
+
+.banner-slide img {
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+.banner-full {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

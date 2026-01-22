@@ -1,0 +1,79 @@
+.wedding-gift-section {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.wedding-gift-toggle {
+  padding: 10px 20px;
+  background-color: #ff66b2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.wedding-gift-toggle:hover {
+  background-color: #ff3385;
+}
+
+/* Modal Styles */
+.wedding-gift-modal .ant-modal-content {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.wedding-gift-info {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.wedding-gift-method {
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+}
+
+.wedding-gift-method h3 {
+  color: #ff66b2;
+}
+
+.wedding-gift-method p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.wedding-gift-qr {
+  margin-top: 20px;
+}
+
+.qr-code {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.close-modal {
+  padding: 10px 20px;
+  background-color: #ff66b2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.close-modal:hover {
+  background-color: #ff3385;
+}

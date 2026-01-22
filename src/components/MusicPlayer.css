@@ -1,0 +1,40 @@
+.music-button {
+  position: fixed;
+  bottom: 40px;
+  left: 20px;
+  background-color: #f06292;  /* Pink background */
+  border-radius: 50%;  /* Circle button */
+  padding: 10px;
+  border: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.music-button:hover {
+  background-color: #d5006d;  /* Darker pink when hovered */
+}
+
+.music-button:active {
+  transform: scale(0.95);
+}
+
+.music-button.playing {
+  animation: pulse 1.5s infinite;  /* Pulsing effect */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(240, 98, 146, 0.8);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(240, 98, 146, 1);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(240, 98, 146, 0.8);
+  }
+}
