@@ -1,51 +1,52 @@
 import React from "react";
-import "./WeddingAlbum.css";
-import { Modal } from "antd";
+import "./BirthdayAlbum.css";
+import { Image, Modal } from "antd";
 
 const images = [
-  //@ts-ignore
   require("../assets/anhcuoi1.jpg"),
-  //@ts-ignore
   require("../assets/anhcuoi2.jpg"),
-  //@ts-ignore
   require("../assets/anhcuoi3.jpg"),
-  //@ts-ignore
   require("../assets/anhcuoi4.jpg"),
-  //@ts-ignore
   require("../assets/anhcuoi5.jpg"),
-  //@ts-ignore
   require("../assets/anhcuoi6.jpg"),
-  //@ts-ignore
   require("../assets/anhcuoi7.jpg"),
-  //@ts-ignore
   require("../assets/anhcuoi8.jpg"),
-  //@ts-ignore
   require("../assets/anhcuoi9.jpg"),
-  //@ts-ignore
   require("../assets/anhcuoi10.jpg"),
-  //@ts-ignore
   require("../assets/anhcuoi11.jpg"),
-  //@ts-ignore
   require("../assets/anhcuoi12.jpg"),
-  //@ts-ignore
   require("../assets/anhcuoi13.jpg"),
-  //@ts-ignore
   require("../assets/anhcuoi18.jpg"),
-  //@ts-ignore
   require("../assets/anhcuoi21.jpg"),
+  require("../assets/banner1.jpg"),
+  require("../assets/banner2.jpg"),
+  require("../assets/anh1.jpg"),
 ];
-const WeddingAlbum: React.FC = () => {
+
+const BirthdayAlbum: React.FC = () => {
   const [visible, setVisible] = React.useState(false);
   const [currentImage, setCurrentImage] = React.useState(0);
+
+  const nextImage = () => {
+    setCurrentImage((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImage((prev) =>
+      prev === 0 ? images.length - 1 : prev - 1
+    );
+  };
+
   return (
     <div className="wedding-album">
-      <h3>Album ảnh cưới</h3>
+      <h3>📸 Khoảnh khắc đáng nhớ</h3>
+
       <div className="album-grid">
         {images.map((image, index) => (
           <div key={index} className="album-item">
             <img
               src={image}
-              alt={`Wedding ${index + 1}`}
+              alt={`Memory ${index + 1}`}
               onClick={() => {
                 setCurrentImage(index);
                 setVisible(true);
@@ -54,31 +55,35 @@ const WeddingAlbum: React.FC = () => {
           </div>
         ))}
       </div>
+
       <Modal
         open={visible}
         onCancel={() => setVisible(false)}
         footer={null}
-        width={"80%"}
+        centered
+        maskClosable
         closable={false}
-        style={{
-          maxWidth: "600px",
-        }}
+        width="80%"
+        style={{ maxWidth: "80%" }}
       >
-        <img
-          src={images[currentImage]}
-          alt={`Wedding ${currentImage + 1}`}
-          style={{
-            height: "80vh",
-            display: "flex",
-            margin: "auto",
-            maxWidth: "100%",
-            objectFit: "cover",
-            maxHeight: "550px",
-          }}
-        />
+        <div className="album-modal">
+          <button className="nav-btn left" onClick={prevImage}>
+            ‹
+          </button>
+
+          <Image
+            src={images[currentImage]}
+            alt=""
+            className="modal-image"
+          />
+
+          <button className="nav-btn right" onClick={nextImage}>
+            ›
+          </button>
+        </div>
       </Modal>
     </div>
   );
 };
 
-export default WeddingAlbum;
+export default BirthdayAlbum;

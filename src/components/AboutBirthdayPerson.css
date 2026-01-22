@@ -6,10 +6,14 @@
 
 .profile-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+.profile-container.single .profile {
+  max-width: 360px;
 }
 
 .profile {
@@ -24,7 +28,9 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .profile:hover {
@@ -43,7 +49,7 @@
 .profile-info h2 {
   font-size: 1.5rem;
   color: #333;
-  font-family: 'Pacifico', sans-serif;
+  font-family: "Pacifico", sans-serif;
   /* Font uốn lượn cho tên */
 }
 

@@ -5,7 +5,7 @@
   font-size: 20px;
   font-style: italic;
   background-color: #fffafc;
-  color: #c2185b;
+  color: #ff6f91;
   position: relative;
   overflow: hidden;
 }
@@ -15,9 +15,6 @@
   content: "";
   display: block;
   height: 20px;
-  background-image: url('/public/decor-border.svg');
-  background-repeat: repeat-x;
-  background-size: contain;
   position: absolute;
   left: 0;
   right: 0;
