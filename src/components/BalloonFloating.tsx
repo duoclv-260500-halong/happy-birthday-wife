@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./BalloonFloating.css";
 
-export const DATE_BIRTHDAY = 22;
+export const DATE_BIRTHDAY = 29;
 export const MONTH_BIRTHDAY = 0; // 0 = January, 11 = December
 
 const BalloonFloating: React.FC = () => {
@@ -73,9 +73,9 @@ const BalloonFloating: React.FC = () => {
   return (
     <>
       <div className="heart-container" ref={containerRef}></div>
-      {isSpecialDay() && (
+      {/* {isSpecialDay() && (
         <div className="special-text">Hôm nay là ngày đặc biệt 💙</div>
-      )}
+      )} */}
     </>
   );
 };

@@ -175,8 +175,8 @@
 }
 
 .final-image {
-  width: 220px;
-  max-width: 70%;
+  min-width: 220px;
+  max-width: 30vw;
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
   animation: zoomIn 1.6s ease forwards;

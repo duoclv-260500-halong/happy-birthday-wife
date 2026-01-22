@@ -10,6 +10,13 @@ const COLORS = [
   "linear-gradient(135deg, #ffecd2, #fcb69f)", // cam
 ];
 
+const musics = [
+  require("../assets/Chúc Em Thêm Một Tuổi.mp3"),
+  require("../assets/Chúc Em Thêm Một Tuổi (1).mp3"),
+  require("../assets/Mừng Sinh Nhật Em.mp3"),
+  require("../assets/MừngSinhNhậtEm1.mp3"),
+];
+
 const MusicPlayer: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = React.useRef<HTMLAudioElement>(null);
@@ -111,7 +118,7 @@ const MusicPlayer: React.FC = () => {
       <audio ref={audioRef} loop>
         <source
           //@ts-ignore
-          src={require("../assets/I DO.mp3")}
+          src={musics[Math.floor(Math.random() * musics.length)]}
           type="audio/mp3"
         />
       </audio>
@@ -154,7 +161,7 @@ const MusicPlayer: React.FC = () => {
             className="final-image"
           />
           <p className="final-text">
-            Chúc mừng sinh nhật em 💙 Cảm ơn vì đã đến bên anh
+            Mừng ngày đặc biệt của vợ 💙 Cảm ơn vì đã đến bên gia đình
           </p>
         </div>
       )}

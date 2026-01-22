@@ -20,7 +20,8 @@
 .banner-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 👈 key point */
+  max-height: 100vh;
+  object-fit: contain; /* 👈 key point */
   object-position: center;
   border-radius: 12px;
 }

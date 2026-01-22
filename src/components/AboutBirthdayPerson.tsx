@@ -8,6 +8,7 @@ const AboutBirthdayPerson: React.FC = () => {
       <div className="profile-container single">
         <div className="profile">
           <Image
+            preview={false}
             //@ts-ignore
             src={require("../assets/anhcuoi1.jpg")}
             alt="My Love"

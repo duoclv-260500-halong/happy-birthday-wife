@@ -41,7 +41,7 @@
   letter-spacing: 1px;
   animation: fade-soft 3s ease-in-out infinite;
   pointer-events: none;
-  z-index: 9998;
+  z-index: 999;
 }
 
 @keyframes fade-soft {

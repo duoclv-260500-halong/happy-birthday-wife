@@ -28,9 +28,7 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile:hover {
@@ -75,4 +73,54 @@
 .profile:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.profile {
+  animation: floatUpDown 3.5s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.profile {
+  animation: floatUpDown 1.5s ease-in-out infinite;
+}
+
+.profile:hover {
+  animation-play-state: paused;
+}
+
+.profile:hover .profile-image {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .profile {
+    animation-duration: 2.5s;
+  }
+
+  .profile-image {
+    animation-duration: 1.5s;
+  }
 }

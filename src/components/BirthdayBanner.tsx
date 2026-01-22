@@ -18,9 +18,7 @@ const BirthdayBanner: React.FC = () => {
                 <h1>Happy Birthday 🎂</h1>
                 <h2>My Love</h2>
                 <p>
-                  Cảm ơn em vì đã đến bên anh
-                  <br />
-                  và làm mỗi ngày đều trở nên đặc biệt 💖
+                  Em đã làm mỗi ngày đều trở nên đặc biệt 💖
                 </p>
               </div>
             </div>
