@@ -29,7 +29,7 @@ const BirthdayCountdown: React.FC = () => {
           ))}
 
           {/* 4 ô trống trước ngày 1/1/2026 (Thứ Năm) */}
-          {[28, 29, 30, 31].map((day) => (
+          {[29, 30, 31].map((day) => (
             <div key={`dec-${day}`} className="calendar-day prev-month">
               {day}
             </div>

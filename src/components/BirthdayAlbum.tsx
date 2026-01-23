@@ -6,21 +6,23 @@ const images = [
   require("../assets/anhcuoi1.jpg"),
   require("../assets/anhcuoi2.jpg"),
   require("../assets/anhcuoi3.jpg"),
-  require("../assets/anhcuoi4.jpg"),
+  require("../assets/anhcuoi12.jpg"),
   require("../assets/anhcuoi5.jpg"),
-  require("../assets/anhcuoi6.jpg"),
+  require("../assets/anhcuoi13.jpg"),
+
+  require("../assets/anh1.jpg"),
+  require("../assets/anhcuoi21.jpg"),
   require("../assets/anhcuoi7.jpg"),
   require("../assets/anhcuoi8.jpg"),
   require("../assets/anhcuoi9.jpg"),
-  require("../assets/anhcuoi10.jpg"),
   require("../assets/anhcuoi11.jpg"),
-  require("../assets/anhcuoi12.jpg"),
-  require("../assets/anhcuoi13.jpg"),
-  require("../assets/anhcuoi18.jpg"),
-  require("../assets/anhcuoi21.jpg"),
+
   require("../assets/banner1.jpg"),
+  require("../assets/anhcuoi18.jpg"),
+  require("../assets/anhcuoi6.jpg"),
+  require("../assets/anhcuoi10.jpg"),
+  require("../assets/anhcuoi4.jpg"),
   require("../assets/banner2.jpg"),
-  require("../assets/anh1.jpg"),
 ];
 
 const BirthdayAlbum: React.FC = () => {
@@ -32,9 +34,7 @@ const BirthdayAlbum: React.FC = () => {
   };
 
   const prevImage = () => {
-    setCurrentImage((prev) =>
-      prev === 0 ? images.length - 1 : prev - 1
-    );
+    setCurrentImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
   return (
@@ -71,11 +71,7 @@ const BirthdayAlbum: React.FC = () => {
             ‹
           </button>
 
-          <Image
-            src={images[currentImage]}
-            alt=""
-            className="modal-image"
-          />
+          <Image src={images[currentImage]} alt="" className="modal-image" />
 
           <button className="nav-btn right" onClick={nextImage}>
             ›

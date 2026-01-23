@@ -16,25 +16,17 @@ const musics = [
   require("../assets/Mừng Sinh Nhật Em.mp3"),
   require("../assets/MừngSinhNhậtEm1.mp3"),
 ];
+const musicsRoot = require("../assets/happy birthday - Phan Đình Tùng.mp3");
 
 const MusicPlayer: React.FC = () => {
+  const paramsUrl = new URLSearchParams(window.location.search);
+  const musicMode = paramsUrl.get("music");
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = React.useRef<HTMLAudioElement>(null);
   const [bg, setBg] = useState(COLORS[0]);
   const [finalMoment, setFinalMoment] = useState(false);
   const [candleOn, setCandleOn] = useState(false);
   const [blowing, setBlowing] = useState(false);
-
-  const toggleMusic = () => {
-    if (!audioRef.current) return;
-
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play();
-    }
-    setIsPlaying(!isPlaying);
-  };
 
   useEffect(() => {
     if (!isPlaying) return;
@@ -65,7 +57,7 @@ const MusicPlayer: React.FC = () => {
 
   const isBirthdayToday = () => {
     const today = new Date();
-    return today.getDate() === DATE_BIRTHDAY && today.getMonth() === 0; // Jan = 0
+    return today.getDate() === DATE_BIRTHDAY - 1 && today.getMonth() === 0; // Jan = 0
   };
   const handleCakeClick = () => {
     const audio = audioRef.current;
@@ -113,12 +105,23 @@ const MusicPlayer: React.FC = () => {
     }, 1200);
   };
 
+  const srcAudio =
+    musicMode === "root"
+      ? musicsRoot
+      : musics[
+          Math.floor(
+            Math.random() *
+              (musicMode === "full"
+                ? musics.length
+                : Math.floor(musics.length / 2)),
+          )
+        ];
   return (
     <>
       <audio ref={audioRef} loop>
         <source
           //@ts-ignore
-          src={musics[Math.floor(Math.random() * musics.length)]}
+          src={srcAudio}
           type="audio/mp3"
         />
       </audio>

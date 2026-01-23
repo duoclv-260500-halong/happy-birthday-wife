@@ -41,7 +41,7 @@ const CountdownTimer: React.FC = () => {
         fontSize: "18px",
       }}
     >
-      ⏳ Còn lại: {formatTime(remaining)}
+      {remaining > 0 ? "⏳ Còn lại: " + formatTime(remaining) : "🎉 Happy Birthday My Love 💖"}
     </div>
   );
 };
