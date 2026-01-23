@@ -1,0 +1,126 @@
+.introduction {
+  padding: 40px 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.profile-container.single .profile {
+  max-width: 360px;
+}
+
+.profile {
+  max-width: 45%;
+  width: -webkit-fill-available;
+  margin: 10px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.profile-info h2 {
+  font-size: 1.5rem;
+  color: #333;
+  font-family: "Pacifico", sans-serif;
+  /* Font uốn lượn cho tên */
+}
+
+.profile-info p {
+  color: rgb(255, 0, 0, 0.6);
+  margin-top: 10px;
+  line-height: 1.5;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.profile-info p:nth-child(odd) {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .profile {
+    max-width: 80%;
+  }
+}
+
+.profile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.profile {
+  animation: floatUpDown 3.5s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.profile {
+  animation: floatUpDown 1.5s ease-in-out infinite;
+}
+
+.profile:hover {
+  animation-play-state: paused;
+}
+
+.profile:hover .profile-image {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .profile {
+    animation-duration: 2.5s;
+  }
+
+  .profile-image {
+    animation-duration: 1.5s;
+  }
+}
