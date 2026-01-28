@@ -20,7 +20,9 @@ const musicsRoot = require("../assets/happy birthday - Phan Đình Tùng.mp3");
 
 const MusicPlayer: React.FC = () => {
   const paramsUrl = new URLSearchParams(window.location.search);
-  const musicMode = paramsUrl.get("music");
+  const musicNumber = Number(paramsUrl.get("music") || "0");
+  const cakeMode = paramsUrl.get("cake");
+
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = React.useRef<HTMLAudioElement>(null);
   const [bg, setBg] = useState(COLORS[0]);
@@ -56,9 +58,13 @@ const MusicPlayer: React.FC = () => {
   };
 
   const isBirthdayToday = () => {
+    if (cakeMode === "1") {
+      return true;
+    }
     const today = new Date();
-    return today.getDate() === DATE_BIRTHDAY - 1 && today.getMonth() === 0; // Jan = 0
+    return today.getDate() === DATE_BIRTHDAY && today.getMonth() === 0; // Jan = 0
   };
+
   const handleCakeClick = () => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -105,17 +111,7 @@ const MusicPlayer: React.FC = () => {
     }, 1200);
   };
 
-  const srcAudio =
-    musicMode === "root"
-      ? musicsRoot
-      : musics[
-          Math.floor(
-            Math.random() *
-              (musicMode === "full"
-                ? musics.length
-                : Math.floor(musics.length / 2)),
-          )
-        ];
+  const srcAudio = musicNumber === -1 ? musicsRoot : musics[musicNumber];
   return (
     <>
       <audio ref={audioRef} loop>

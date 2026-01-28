@@ -48,7 +48,6 @@
   font-size: 1.5rem;
   color: #333;
   font-family: "Pacifico", sans-serif;
-  /* Font uốn lượn cho tên */
 }
 
 .profile-info p {
@@ -70,27 +69,6 @@
   }
 }
 
-.profile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-}
-
-@keyframes floatUpDown {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.profile {
-  animation: floatUpDown 3.5s ease-in-out infinite;
-}
-
 @keyframes floatUpDown {
   0% {
     transform: translateY(0);
@@ -107,13 +85,6 @@
   animation: floatUpDown 1.5s ease-in-out infinite;
 }
 
-.profile:hover {
-  animation-play-state: paused;
-}
-
-.profile:hover .profile-image {
-  animation-play-state: paused;
-}
 
 @media (max-width: 768px) {
   .profile {
